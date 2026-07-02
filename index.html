@@ -22,21 +22,21 @@
   .cira-wrap {
     padding: 2rem 1rem;
     width: 100%;
-    max-width: 740px;
     margin: 0 auto;
   }
 
   .cira-inner {
-    display: grid;
-    grid-template-columns: 55fr 45fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
+    text-align: center;
   }
 
   .cira-text {
-    font-size: 1.15rem;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
     font-weight: 400;
-    line-height: 1.55;
+    line-height: 1.3;
   }
 
   .cira-text .primary {
@@ -50,45 +50,48 @@
   .cira-action {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .copy-btn {
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding: 12px 24px;
-    border-radius: 6px;
+    font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+    font-weight: 700;
+    width: 100%;
+    padding: 22px 24px;
+    border-radius: 8px;
     cursor: pointer;
     border: 1px solid #111;
     background: #111;
     color: #fff;
     letter-spacing: 0.01em;
-    transition: all 0.15s ease;
-    white-space: nowrap;
+    line-height: 1.3;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
 
   .copy-btn:hover {
-    background: #333;
-    border-color: #333;
+    transform: scale(1.02);
+  }
+
+  .copy-btn:active {
+    background: #fff;
+    color: #111;
+    border-color: #111;
+    transform: scale(0.99);
   }
 
   .copy-btn.copied {
-    border-color: #aaa;
-    background: #aaa;
-    color: #fff;
+    background: #fff;
+    color: #111;
+    border-color: #111;
+    transform: scale(1);
   }
 
   @media (max-width: 680px) {
-    .cira-inner {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      text-align: center;
-    }
-    .cira-text {
-      font-size: 1.35rem;
-    }
     .cira-action {
-      justify-content: center;
+      width: 100%;
     }
     .cira-wrap {
       padding: 2rem 1rem;
@@ -100,7 +103,7 @@
 <div class="cira-wrap">
   <div class="cira-inner">
     <div class="cira-text">
-      <span class="primary">The framework meets you where&nbsp;you&nbsp;are.</span><br>
+      <span class="primary">The framework meets you where you are.</span><br>
       <span class="secondary">Find out where that is.</span>
     </div>
     <div class="cira-action">
