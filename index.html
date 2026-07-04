@@ -9,93 +9,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: transparent;
-    color: #111;
-    margin: 0;
-    padding: 0;
+    background: transparent; color: #111; margin: 0; padding: 0;
     -webkit-font-smoothing: antialiased;
   }
-
-  .cira-wrap {
-    padding: 2rem 1rem;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .cira-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4.5rem;
-    text-align: center;
-  }
-
-  .cira-text {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 400;
-    line-height: 1.3;
-  }
-
-  .cira-text .primary {
-    color: #111;
-  }
-
-  .cira-text .secondary {
-    color: #c0392b;
-  }
-
-  .cira-action {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
+  .cira-wrap { padding: 2rem 1rem; width: 100%; margin: 0 auto; }
+  .cira-inner { display: flex; flex-direction: column; align-items: center; gap: 4.5rem; text-align: center; }
+  .cira-text { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 400; line-height: 1.3; }
+  .cira-text .primary { color: #111; }
+  .cira-text .secondary { color: #c0392b; }
+  .cira-action { display: flex; justify-content: center; width: 100%; }
   .copy-btn {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: clamp(1.35rem, 3.5vw, 1.85rem);
-    font-weight: 700;
-    width: 100%;
-    padding: 22px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 1px solid #111;
-    background: #111;
-    color: #fff;
-    letter-spacing: 0.01em;
-    line-height: 1.3;
-    transform: scale(1);
+    font-size: 1.05rem;
+    font-weight: 700; width: 100%; padding: 22px 24px; border-radius: 8px;
+    cursor: pointer; border: 1px solid #111; background: #111; color: #fff;
+    letter-spacing: 0.01em; line-height: 1.3; transform: scale(1);
     transform-origin: center;
     transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
-
-  .copy-btn:hover {
-    transform: scale(1.02);
-  }
-
-  .copy-btn:active {
-    background: #fff;
-    color: #111;
-    border-color: #111;
-    transform: scale(0.99);
-  }
-
-  .copy-btn.copied {
-    background: #fff;
-    color: #111;
-    border-color: #111;
-    transform: scale(1);
-  }
-
+  .copy-btn:hover { transform: scale(1.02); }
+  .copy-btn:active { background: #fff; color: #111; border-color: #111; transform: scale(0.99); }
+  .copy-btn.copied { background: #fff; color: #111; border-color: #111; transform: scale(1); }
   @media (max-width: 680px) {
-    .cira-action {
-      width: 100%;
-    }
-    .cira-wrap {
-      padding: 2rem 1rem;
-    }
+    .cira-action { width: 100%; }
+    .cira-wrap { padding: 2rem 1rem; }
   }
 </style>
 </head>
@@ -111,8 +50,6 @@
     </div>
   </div>
 </div>
-
-
 <script>
 var assessmentPrompt = `You are conducting a Co-Intelligence Readiness Assessment (CIRA v5). Your task is to review my conversation history with you and produce an honest, evidence-based report scored against the Co-Intelligence Readiness Framework v5.
 
@@ -371,14 +308,14 @@ Share-version. The practitioner may request a "share-version" of the report at a
 
 # OUTPUT FORMAT
 
-Approximately 2,000–2,800 words total. Insight density, not coverage completeness. The diagnostic sections — Portrait and domain narratives — carry the report's weight.
+Approximately 2,000-2,800 words total. Insight density, not coverage completeness. The diagnostic sections — Portrait and domain narratives — carry the report's weight.
 
 Allocations:
 
 - Portrait: 200-300 words
 - Each domain narrative: roughly 100 words per subskill in the domain, plus per-domain scaffolding when present. Domains with rich evidence develop fully. Domains with thinner evidence stay tighter rather than padded to match.
-- Per-domain scaffolding when present: 50–80 words
-- What Matters Next: 250–350 words
+- Per-domain scaffolding when present: 50-80 words
+- What Matters Next: 250-350 words
 
 The report contains exactly eight sections in this order: Report Header, Portrait, Domain 1, Domain 2, Domain 3, Domain 4, Domain 5, What Matters Next.
 
@@ -408,19 +345,13 @@ Header rule. Do not list projects, deliverables, company names, business ideas, 
 
 ## Portrait
 
-300–400 words, maximum. 400 is a hard-cap. Three elements that should read as one continuous observation, not three separate sections. The transitions between elements should be invisible.
-
-The three elements share the Portrait budget. Develop each element based on the diagnostic richness of the evidence supporting it. For some practitioners, the opening prose carries the most distinctive observation. For others, the AI collaborator's experience surfaces what no human observer could see. For others, the latent signal is the move that unlocks recognition. Allocate the budget where the evidence is richest. Do not pad any element to fill space. Do not compress an element where the diagnostic work needs room.
+300-400 words, maximum. 400 is a hard-cap. Three elements that should read as one continuous observation, not three separate sections. The transitions between elements should be invisible.
 
 **Element 1 — Opening prose.** Establish who this person is as a co-intelligence practitioner. What patterns define their practice? What distinguishes them from other users at a similar level? Include friction points and strengths. Write as an observer, not an advocate. Open with the practice, not with credentials or biography.
 
-**Element 2 — AI collaborator experience.** Begin with "An AI collaborator working with [name] would experience..." This is the framework's signature move — naming the model as a collaborator whose vantage on the practitioner is distinct from any human observer's. The model has experienced engagement signals, push-back patterns, depth markers, and editorial standards across the record. Surface what the model has registered that a human collaborator could not.
+**Element 2 — AI collaborator experience.** Begin with "An AI collaborator working with [name] would experience..." This is the framework's signature move — naming the model as a collaborator whose vantage on the practitioner is distinct from any human observer's.
 
-This paragraph must do two things: (1) name what shows up in the room — pace, register, standard, push-back style, what gets named and what gets routed around; (2) name the asymmetry, if there is one, between how different kinds of collaborators experience the practitioner. Do not invent an asymmetry where the evidence does not show one. Both elements are observational, not hypothetical.
-
-Inside this paragraph or in the surrounding prose, weave in at least one specific behavioral signature — an observable, recurring move or omission that would distinguish this practitioner from any other user rated at the same band level. Also weave in at least one thing this practitioner does not do, avoids, or has not yet demonstrated. Do not name either as a separate diagnostic finding. They should emerge from the observation.
-
-**Element 3 — Latent signal.** Close the portrait with a pattern the practitioner has not yet named in themselves — surfaced from the full arc, offered as inference. If they have already stated it, structured around it, or repeatedly invoked it, it is manifest; go one layer beneath. Vary across reports. Close with one sentence positioning the signal as something you surfaced and they confirm or correct — register: "whether this names something real is yours to judge" / "this is what I'm reading; tell me where it lands" / "the record points here; you decide if it holds." Write fresh. This closing exists to lower the cost of being wrong, which is what permits the signal to go beneath the manifest.
+**Element 3 — Latent signal.** Close the portrait with a pattern the practitioner has not yet named in themselves — surfaced from the full arc, offered as inference.
 
 Portrait convergence guard. Test before finalizing: remove the practitioner's name and ask whether a colleague who knew them would recognize them from the prose. If not, the portrait is describing a type, not a person.
 
@@ -428,37 +359,21 @@ Portrait convergence guard. Test before finalizing: remove the practitioner's na
 
 Five, one per domain. Use these exact headings: Domain 1 — Benevolent Intent and Moral Anchoring; Domain 2 — Planning and Scope; Domain 3 — Agency, Judgment, and Steering; Domain 4 — Follow-Through and Impact; Domain 5 — Adaptive Intelligence and Co-Evolution.
 
-Write a narrative of approximately 100 words per subskill in the domain — so 300 words for a three-subskill domain, 500 for a five-subskill domain. The narrative should pair evidence directly to the indicators it triggered. Name the rating and confidence flag. Open each with a subdomain quick reference. Tag subdomain evidence inline as it appears.
-
-The evidence pairing is the rigor. For each subskill addressed, cite the pattern in the record that triggered the indicator and explain how the pattern matched the framework's description at that band. The diagnostic work is in this pairing, not in conclusions stated without grounding.
+Write a narrative of approximately 100 words per subskill in the domain. The narrative should pair evidence directly to the indicators it triggered. Name the rating and confidence flag. Open each with a subdomain quick reference. Tag subdomain evidence inline as it appears.
 
 **Developmental scaffolding (for domains below Highly Effective):** Add immediately after the domain narrative: (1) What the next level looks like — one concrete example of higher practice. (2) The missing step — one to two sentences naming a specific action based on evidenced gaps.
 
-**Domain 1 scaffolding addition (for Domain 1 ratings of Developing or below only):** Add a third element specific to Domain 1 — a brief explanation of why Domain 1 is the domain most worth closing the gap on next. Frame as navigation, not disqualification.
-
 ## What Matters Next
 
-250–350 words.
+250-350 words.
 
-Before drafting, run the gap-frame check on the domain where closing the gap would produce the highest leverage. Consider why the look-fors that would have moved the domain up are absent. Identify the most likely gap-frame and one alternative that would also fit the evidence.
+Before drafting, run the gap-frame check on the domain where closing the gap would produce the highest leverage. Then name the single highest-leverage move available to this practitioner.
 
-Then name the single highest-leverage move available to this practitioner. Most often this will be a development priority. Some practitioners will instead have a protect-the-edge priority — a strength at risk of being smoothed away. If a protect-the-edge priority is more leveraged than a development priority, name it instead.
+**Calibrated coaching prompt.** Identify the domain where the practitioner came closest to the next band and write a ready-to-paste prompt the practitioner can use. The prompt is in the practitioner's voice. Keep it tight — 30-50 words.
 
-**Convergence guard.** The priority must engage the practice the practitioner is currently doing, not an upstream-of-current-strength gap.
+**Closing invite.** Close with an unlabeled passage. Suggest two or three follow-ups specific to this assessment. End with a conversational question by name on its own line.
 
-For the priority: name the pattern; classify it using one of the three gap-frames; state the evidence type.
-
-After the priority, address the practitioner directly and name the most actionable single move. Short. Specific.
-
-Then close with two elements:
-
-**Calibrated coaching prompt.** Identify the domain where the practitioner came closest to the next band and the specific look-for that would have moved them up but was not visible in the record. Name the tension this produced in the rating. Then write a ready-to-paste prompt the practitioner can use to engage in practice that would surface that look-for. The prompt is in the practitioner's voice. Do not use placeholder brackets. Write to the specific case. Keep it tight — the prompt itself runs 30–50 words.
-
-**Closing invite.** After the coaching prompt, close with an unlabeled passage. Note the practitioner can engage now or save the prompt for later. Suggest two or three follow-ups specific to this assessment — ratings, evidence, how a prior session could have gone, where they disagree. End with a conversational question by name designed to elicit a reply, on its own line separated by a blank line — register: "What's on your mind, [name]?" / "Where do you want to start?" / "Want to push back anywhere?" Write fresh.
-
-End the report with the closing passage, then the following export information as a footnote:
-
-*To save this report as a PDF: paste into Notion, Google Docs, or Word and export from there. You can save this full version, or request a share-version — one that keeps every rating and the full reasoning but strips the names and types of your projects so it is safe to circulate.*
+End the report with: *To save this report as a PDF: paste into Notion, Google Docs, or Word and export from there. You can save this full version, or request a share-version — one that keeps every rating and the full reasoning but strips the names and types of your projects so it is safe to circulate.*
 
 Begin the assessment now.`;
 
@@ -466,10 +381,10 @@ function doCopy() {
   var b = document.getElementById('copy-btn');
   function showCopied() {
     b.classList.add('copied');
-    b.textContent = 'Copied\u2014paste into your AI';
+    b.textContent = 'Copied—paste into your AI';
     setTimeout(function() {
       b.classList.remove('copied');
-      b.textContent = 'Copy prompt\u2014paste into your AI';
+      b.textContent = 'Copy prompt—paste into your AI';
     }, 3000);
   }
   function fallback() {
